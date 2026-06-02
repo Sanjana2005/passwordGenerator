@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secure Password Generator</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h1>
+<i class="fa-solid fa-shield-halved"></i>
+Secure Password Generator
+</h1>
+
+<p class="subtitle">
+Generate strong and secure passwords instantly
+</p>
+
+<div class="password-box">
+<input type="text" id="password" readonly>
+<button onclick="copyPassword()">
+<i class="fa-regular fa-copy"></i>
+</button>
+</div>
+
+<div class="controls">
+
+<label>Password Length</label>
+
+<div class="slider-box">
+<input type="range" id="length" min="6" max="30" value="12">
+<span id="lengthValue">12</span>
+</div>
+
+<div class="options">
+
+<label>
+<input type="checkbox" id="uppercase" checked>
+Uppercase
+</label>
+
+<label>
+<input type="checkbox" id="lowercase" checked>
+Lowercase
+</label>
+
+<label>
+<input type="checkbox" id="numbers" checked>
+Numbers
+</label>
+
+<label>
+<input type="checkbox" id="symbols" checked>
+Symbols
+</label>
+
+</div>
+
+<button class="generate-btn" onclick="generatePassword()">
+Generate Password
+</button>
+
+<div class="strength">
+<div id="strengthBar"></div>
+</div>
+
+<p id="strengthText">Strength: Medium</p>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
